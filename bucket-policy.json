@@ -9,6 +9,13 @@
       "Resource": "arn:aws:s3:::${bucket_name}/public/*"
     },
     {
+      "Sid": "PublicDelete",
+      "Effect": "Allow",
+      "Principal": "*",
+      "Action": "s3:DeleteObject",
+      "Resource": "arn:aws:s3:::${bucket_name}/public/*"
+    },
+    {
       "Sid": "PutWebsite",
       "Effect": "Allow",
       "Principal": {
